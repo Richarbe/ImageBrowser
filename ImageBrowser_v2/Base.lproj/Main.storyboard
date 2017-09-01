@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="image counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-O8-dzW">
-                                <rect key="frame" x="16" y="286" width="343" height="21"/>
+                                <rect key="frame" x="16" y="619" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcz-rJ-ZvH">
+                                <rect key="frame" x="16" y="350" width="343" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="image title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVD-cr-3we">
+                                <rect key="frame" x="16" y="321" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -50,18 +61,20 @@
                     <connections>
                         <outlet property="imageCounter" destination="gvC-O8-dzW" id="Ynj-Ol-P8a"/>
                         <outlet property="imageTitle" destination="kyF-d7-wFT" id="ZEE-nu-WVc"/>
+                        <outlet property="imageTitle2" destination="UVD-cr-3we" id="n5j-cp-GLA"/>
                         <outlet property="imageView" destination="4ri-Sy-ZGZ" id="1C3-nf-KMY"/>
+                        <outlet property="imageView2" destination="Kcz-rJ-ZvH" id="tlD-Va-yjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="3pD-h1-Ezh">
+                <swipeGestureRecognizer direction="down" id="3pD-h1-Ezh">
                     <connections>
-                        <action selector="didSwipeRight:" destination="BYZ-38-t0r" id="ImQ-nK-IMe"/>
+                        <action selector="didSwipeDown:" destination="BYZ-38-t0r" id="TbF-pY-ZuR"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="mW3-Yj-oUB">
+                <swipeGestureRecognizer direction="up" id="mW3-Yj-oUB">
                     <connections>
-                        <action selector="didSwipeLeft:" destination="BYZ-38-t0r" id="0zq-ux-uAS"/>
+                        <action selector="didSwipeUp:" destination="BYZ-38-t0r" id="XId-mW-Xfk"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
